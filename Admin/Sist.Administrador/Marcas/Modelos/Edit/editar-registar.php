@@ -11,9 +11,10 @@
 	$r2 = mysql_query("SELECT * from seguro_modelos WHERE ID ='".$_GET['id']."'");
     $row = mysql_fetch_array($r2);
 	*/
+
     Conectarse();
     $vehiculo = new vehiculoController;
-    $row = $vehiculo->optenerModelo($_GET['id']);
+    $row = $vehiculo->getModelo($_GET['id']);
 	// ACTIONES PARA TOMAR ....
 	if($_GET['accion']){
 		$acc	= $_GET['accion'];
@@ -22,7 +23,6 @@
 		$acc 	= 'Editar';
 		$acc_text 	= 'Editar';
 	}
-	
  ?>
 
 <form action="" method="post" enctype="multipart/form-data" id="form_edit_perso">
@@ -77,10 +77,9 @@
                                                     class="form-control">
                                                     <option value="">- Seleccionar - </option>
                                                     <?php
-                                                        $rescat2 = mysql_query(
-                                                            "SELECT id, nombre, veh_tipo from seguro_tarifas order by nombre ASC"
-                                                        );
-                                                        while ($cat2 = mysql_fetch_array($rescat2)) {
+                                                        $tipoVehiculo = new vehiculoController;
+                                                        $row = $tipoVehiculo->getType(); 
+                                                        while ($cat2 = $row) {
                                                             $c2 = $cat2['nombre'];
                                                             $c_id2 = $cat2['veh_tipo'];
     
