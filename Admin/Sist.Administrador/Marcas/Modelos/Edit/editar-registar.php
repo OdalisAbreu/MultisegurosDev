@@ -75,7 +75,7 @@
                                                             $tipoVehiculo = new vehiculoController;
                                                             $tipoComp = $tipoVehiculo->getType($row['tipo']);
                                                             $tipo =  mysql_fetch_array($tipoComp);
-                                                         echo '<option value="'.$tipo['veh_tipo'].'">'.$tipo['nombre'].'-'.$row['tipo'].'</option>';
+                                                         echo '<option value="'.$tipo['veh_tipo'].'">'.$tipo['nombre'].'</option>';
                                                         }else{
                                                             echo '<option value="">- Seleccionar - </option>';
                                                         }
@@ -83,8 +83,10 @@
                                                         $tipoVehiculo = new vehiculoController;
                                                         $rescat2 = $tipoVehiculo->getTypes();
                                                         while ($cat2 = mysql_fetch_array($rescat2)) {
-                                                            $c2 = $cat2['nombre'];
-                                                            $c_id2 = $cat2['veh_tipo'];
+                                                            if($tipo['veh_tipo'] != $cat2['veh_tipo']){
+                                                                $c2 = $cat2['nombre'];
+                                                                $c_id2 = $cat2['veh_tipo'];
+                                                            }
     
                                                             echo "<option value=\"$c_id2\" >$c2</option>";
                                                         }
