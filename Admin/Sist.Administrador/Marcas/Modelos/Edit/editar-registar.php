@@ -68,25 +68,14 @@
                                             <label class="strong">Tipo <span class="label label-important" id="Nombres"
                                                     style="display:none">*</span></label>
                                             <div class="form-group ">
-                                            <?php
-                                                        if($row['tipo']){
-                                                         $tipoVehiculo = new vehiculoController;
-                                                         $tipo = $tipoVehiculo->getType($row['tipo']);
-                                                         $tipo2 =  mysql_fetch_array($tipo);
-
-                                                         echo 'Esto es lo que hay '.$tipo2['nombre'];
-                                                        }else{
-                                                            echo 'No hay na';
-                                                        }
-                                              ?>
-
                                                 <select name="tipo" id="tipo" style="display:compact"
                                                     class="form-control">
                                                     <?php
                                                         if($row['tipo']){
-                                                         $tipoVehiculo = new vehiculoController;
-                                                         $tipo = $tipoVehiculo->getType($row['tipo']);
-                                                         echo '<option value="'.$tipo['veh_tipo'].'">'.$tipo.'-'.$row['tipo'].'</option>';
+                                                            $tipoVehiculo = new vehiculoController;
+                                                            $tipoComp = $tipoVehiculo->getType($row['tipo']);
+                                                            $tipo =  mysql_fetch_array($tipoComp);
+                                                         echo '<option value="'.$tipo['veh_tipo'].'">'.$tipo['nombre'].'-'.$row['tipo'].'</option>';
                                                         }else{
                                                             echo '<option value="">- Seleccionar - </option>';
                                                         }
