@@ -64,15 +64,14 @@
                                                     id="cod_modelo" name="cod_modelo" value="<?=$row['cod_modelo']?>">
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <label class="strong">Tipo <span class="label label-important"
-                                                        id="Nombres" style="display:none">*</span></label>
-                                                <div class="form-group ">
-                                                    <select name="tipo" id="tipo" style="display:compact"
-                                                        class="form-control">
-                                                        <option value="">- Seleccionar - </option>
-                                                        <?php
+                                        <div class="col-lg-6">
+                                            <label class="strong">Tipo <span class="label label-important" id="Nombres"
+                                                    style="display:none">*</span></label>
+                                            <div class="form-group ">
+                                                <select name="tipo" id="tipo" style="display:compact"
+                                                    class="form-control">
+                                                    <option value="">- Seleccionar - </option>
+                                                    <?php
                                                         $rescat2 = mysql_query(
                                                             "SELECT id, nombre, veh_tipo from seguro_tarifas order by nombre ASC"
                                                         );
@@ -83,11 +82,9 @@
                                                             echo "<option value=\"$c_id2\" >$c2</option>";
                                                         }
                                                         ?>
-                                                    </select>
-                                                </div>
+                                                </select>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
