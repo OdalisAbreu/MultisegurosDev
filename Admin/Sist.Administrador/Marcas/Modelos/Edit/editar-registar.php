@@ -78,8 +78,9 @@
                                                     <option value="">- Seleccionar - </option>
                                                     <?php
                                                         $tipoVehiculo = new vehiculoController;
-                                                        $row = $tipoVehiculo->getType(); 
-                                                        while ($cat2 = $row) {
+                                                        $vehiculos = $tipoVehiculo->getType(); 
+
+                                                        while ($cat2 = $$vehiculos) {
                                                             $c2 = $cat2['nombre'];
                                                             $c_id2 = $cat2['veh_tipo'];
     
