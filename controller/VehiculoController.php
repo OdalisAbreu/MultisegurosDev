@@ -1,5 +1,6 @@
 <?php
-    include("incluidos/conexion_inc.php");
+    session_start();
+    include("../incluidos/conexion_inc.php");
 
 class vehiculoController{
 
