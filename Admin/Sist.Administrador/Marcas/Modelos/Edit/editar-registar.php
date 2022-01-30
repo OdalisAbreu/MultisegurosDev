@@ -2,7 +2,7 @@
 	// ESTE ARCHIVO LO USAMOS TANTO PARA EDITAR COMO PARA REGISTRAR UN NUEVO MODELO
 	ini_set('display_errors', 1);
 	session_start();
-	//include("../../../../../incluidos/conexion_inc.php");
+	include("../../../../../incluidos/conexion_inc.php");
     include('../../../../../controller/VehiculoController.php');
 	include('../../../../../incluidos/nombres.func.php');
 	
@@ -11,7 +11,7 @@
 	$r2 = mysql_query("SELECT * from seguro_modelos WHERE ID ='".$_GET['id']."'");
     $row = mysql_fetch_array($r2);
 	*/
-
+    Conectarse();
     $vehiculo = new vehiculoController;
     $row = $vehiculo->optenerModelo($_GET['id']);
 	// ACTIONES PARA TOMAR ....
