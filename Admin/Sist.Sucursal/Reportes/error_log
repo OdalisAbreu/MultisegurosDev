@@ -1,0 +1,13 @@
+[25-Nov-2014 14:48:28 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/Admin/Sist.Distribuidor/Reportes/listado_trans.php on line 59
+[25-Nov-2014 15:05:18 America/Santo_Domingo] PHP Fatal error:  Call to undefined function Vehiculo() in /home/seguros1/public_html/Seg/Admin/Sist.Distribuidor/Reportes/listado_trans.php on line 70
+[25-Nov-2014 15:05:22 America/Santo_Domingo] PHP Fatal error:  Call to undefined function Vehiculo() in /home/seguros1/public_html/Seg/Admin/Sist.Distribuidor/Reportes/listado_trans.php on line 70
+[25-Nov-2014 15:05:51 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/incluidos/Func/Vehiculo.php on line 5
+[25-Nov-2014 15:05:51 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/incluidos/Func/Vehiculo.php on line 5
+[25-Nov-2014 15:05:51 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/incluidos/Func/Vehiculo.php on line 5
+[25-Nov-2014 15:05:51 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/incluidos/Func/Vehiculo.php on line 5
+[25-Nov-2014 15:05:51 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/incluidos/Func/Vehiculo.php on line 5
+[25-Nov-2014 15:05:51 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/incluidos/Func/Vehiculo.php on line 5
+[25-Nov-2014 15:05:51 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/incluidos/Func/Vehiculo.php on line 5
+[25-Nov-2014 15:34:05 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/Admin/Sist.Distribuidor/Reportes/listado_trans.php on line 60
+[26-Nov-2014 08:39:12 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/Admin/Sist.Distribuidor/Reportes/recargados.php on line 52
+[29-Nov-2014 14:56:15 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/seguros1/public_html/Seg/Admin/Sist.Distribuidor/Reportes/recargados.php on line 52

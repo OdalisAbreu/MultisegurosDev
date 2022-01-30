@@ -1,0 +1,6 @@
+[05-Feb-2019 13:56:48 America/Santo_Domingo] PHP Warning:  file_get_contents(http://127.0.0.1/ws2/GET_Cedula.php?cedula=&amp;usuario=admin&amp;clave=admin): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/multiseguroscom/public_html/Seg_V2/Admin/Sist.Administrador/Revisiones/Poliza/VerificarPolizaPersonal.php on line 92
+[05-Feb-2019 21:14:20 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/multiseguroscom/public_html/Seg_V2/Admin/Sist.Administrador/Revisiones/Poliza/VerificarPolizaPersonal.php on line 158
+[05-Feb-2019 21:14:29 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/multiseguroscom/public_html/Seg_V2/Admin/Sist.Administrador/Revisiones/Poliza/VerificarPolizaPersonal.php on line 158
+[05-Feb-2019 21:15:17 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/multiseguroscom/public_html/Seg_V2/Admin/Sist.Administrador/Revisiones/Poliza/VerificarPolizaPersonal.php on line 159
+[05-Feb-2019 21:17:08 America/Santo_Domingo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/multiseguroscom/public_html/Seg_V2/Admin/Sist.Administrador/Revisiones/Poliza/VerificarPolizaPersonal.php on line 157
