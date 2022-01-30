@@ -70,15 +70,15 @@
                                             <div class="form-group ">
                                                 <select name="tipo" id="tipo" style="display:compact"
                                                     class="form-control">
-                                                    <?
-                                                        if($row['tipo']){
-                                                          echo '<option value="">- Tiene - </option>';
-                                                        }else{
-                                                            echo '<option value="">- No tiene - </option>';
-                                                        }
-                                                    ?>
-                                                    <option value="">- Seleccionar - </option>
                                                     <?php
+                                                        if($row['tipo']){
+                                                         $tipoVehiculo = new vehiculoController;
+                                                         $tipo = $tipoVehiculo->getType($row['tipo']);
+                                                         echo '<option value="'.$tipo['veh_tipo'].'">'.$tipo['name'].'</option>';
+                                                        }else{
+                                                            echo '<option value="">- Seleccionar - </option>';
+                                                        }
+
                                                         $tipoVehiculo = new vehiculoController;
                                                         $rescat2 = $tipoVehiculo->getTypes();
                                                         while ($cat2 = mysql_fetch_array($rescat2)) {
