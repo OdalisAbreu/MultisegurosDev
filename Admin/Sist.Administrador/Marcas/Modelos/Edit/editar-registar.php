@@ -77,9 +77,11 @@
                                                     class="form-control">
                                                     <option value="">- Seleccionar - </option>
                                                     <?php
-                                                        $rescat2 = mysql_query(
+                                                        /*$rescat2 = mysql_query(
                                                             "SELECT id, nombre, veh_tipo from seguro_tarifas order by nombre ASC"
-                                                        );
+                                                        );*/
+                                                        $tipoVehiculo = new vehiculoController;
+                                                        $rescat2 = $tipoVehiculo->getType();
                                                         while ($cat2 = mysql_fetch_array($rescat2)) {
                                                             $c2 = $cat2['nombre'];
                                                             $c_id2 = $cat2['veh_tipo'];
