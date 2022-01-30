@@ -1,5 +1,5 @@
 <?php
-    include('../incluidos/conexion_inc.php');
+    require_once '../incluidos/conexion_inc.php';
 
 class vehiculoController{
 
