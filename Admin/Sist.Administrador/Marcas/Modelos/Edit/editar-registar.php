@@ -70,10 +70,17 @@
                                             <div class="form-group ">
                                                 <select name="tipo" id="tipo" style="display:compact"
                                                     class="form-control">
+                                                    <?
+                                                        if($row['tipo']){
+                                                          echo '<option value="">- Tiene - </option>';
+                                                        }else{
+                                                            echo '<option value="">- No tiene - </option>';
+                                                        }
+                                                    ?>
                                                     <option value="">- Seleccionar - </option>
                                                     <?php
                                                         $tipoVehiculo = new vehiculoController;
-                                                        $rescat2 = $tipoVehiculo->getType();
+                                                        $rescat2 = $tipoVehiculo->getTypes();
                                                         while ($cat2 = mysql_fetch_array($rescat2)) {
                                                             $c2 = $cat2['nombre'];
                                                             $c_id2 = $cat2['veh_tipo'];

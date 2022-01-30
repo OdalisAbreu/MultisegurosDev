@@ -2,13 +2,20 @@
 
 class vehiculoController{
 
-    // Optiene los tipos de Vehiculos y los devuelve como un array
-    function getType(){
+    // Optiene los tipos de Vehiculos 
+    function getTypes(){
         $consult = mysql_query(
             "SELECT id, nombre, veh_tipo from seguro_tarifas order by nombre ASC"
         );
          return  $consult;
     }
+    // Optiene un tipo de Vehiculos po ID 
+        function getType($id){
+            $consult = mysql_query(
+                "SELECT id, nombre, veh_tipo FROM seguro_tarifas WHERE veh_tipo ORDER BY nombre ASC"
+            );
+             return  $consult;
+        }
 
     //Optiene los modelos de los vehiculos por su ID
     function getModelo($id){
