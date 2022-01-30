@@ -7,8 +7,7 @@ class vehiculoController{
         $consult = mysql_query(
             "SELECT id, nombre, veh_tipo from seguro_tarifas order by nombre ASC"
         );
-        $vehiculos = mysql_fetch_array($consult);
-        return  $vehiculos;
+         return  $consult;
     }
 
     //Optiene los modelos de los vehiculos por su ID
