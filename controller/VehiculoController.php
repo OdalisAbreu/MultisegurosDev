@@ -12,7 +12,7 @@ class vehiculoController{
     // Optiene un tipo de Vehiculos po ID 
         function getType($id){
             $consult = mysql_query(
-                "SELECT id, nombre, veh_tipo FROM seguro_tarifas WHERE veh_tipo = $id ORDER BY nombre ASC"
+                "SELECT id, nombre, veh_tipo FROM seguro_tarifas WHERE veh_tipo = $id"
             );
              return  $consult;
         }

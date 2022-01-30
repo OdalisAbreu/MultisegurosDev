@@ -68,6 +68,16 @@
                                             <label class="strong">Tipo <span class="label label-important" id="Nombres"
                                                     style="display:none">*</span></label>
                                             <div class="form-group ">
+                                            <?php
+                                                        if($row['tipo']){
+                                                         $tipoVehiculo = new vehiculoController;
+                                                         $tipo = $tipoVehiculo->getType($row['tipo']);
+                                                         echo 'Esto es lo que hay '.$tipo;
+                                                        }else{
+                                                            echo 'No hay na';
+                                                        }
+                                              ?>
+
                                                 <select name="tipo" id="tipo" style="display:compact"
                                                     class="form-control">
                                                     <?php
