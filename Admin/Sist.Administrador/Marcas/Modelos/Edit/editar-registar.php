@@ -72,7 +72,7 @@
                                                         if($row['tipo']){
                                                          $tipoVehiculo = new vehiculoController;
                                                          $tipo = $tipoVehiculo->getType($row['tipo']);
-                                                         echo 'Esto es lo que hay '.$tipo;
+                                                         echo 'Esto es lo que hay '.mysql_fetch_row($tipo);
                                                         }else{
                                                             echo 'No hay na';
                                                         }
@@ -91,7 +91,7 @@
 
                                                         $tipoVehiculo = new vehiculoController;
                                                         $rescat2 = $tipoVehiculo->getTypes();
-                                                        while ($cat2 = $rescat2) {
+                                                        while ($cat2 = mysql_fetch_array($rescat2)) {
                                                             $c2 = $cat2['nombre'];
                                                             $c_id2 = $cat2['veh_tipo'];
     
