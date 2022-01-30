@@ -65,22 +65,27 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                        <div class="col-lg-6">
-                                            <select name="tipo" id="tipo" style="display:compact" class="form-control">
-                                                <option value="">- Seleccionar - </option>
-                                                <?php
-													$rescat2 = mysql_query(
-														"SELECT id, nombre, veh_tipo from seguro_tarifas order by nombre ASC"
-													);
-													while ($cat2 = mysql_fetch_array($rescat2)) {
-														$c2 = $cat2['nombre'];
-														$c_id2 = $cat2['veh_tipo'];
-
-														echo "<option value=\"$c_id2\" >$c2</option>";
-													}
-													?>
-                                            </select>
-                                        </div>
+                                            <div class="col-lg-6">
+                                                <label class="strong">Tipo <span class="label label-important"
+                                                        id="Nombres" style="display:none">*</span></label>
+                                                <div class="form-group ">
+                                                    <select name="tipo" id="tipo" style="display:compact"
+                                                        class="form-control">
+                                                        <option value="">- Seleccionar - </option>
+                                                        <?php
+                                                        $rescat2 = mysql_query(
+                                                            "SELECT id, nombre, veh_tipo from seguro_tarifas order by nombre ASC"
+                                                        );
+                                                        while ($cat2 = mysql_fetch_array($rescat2)) {
+                                                            $c2 = $cat2['nombre'];
+                                                            $c_id2 = $cat2['veh_tipo'];
+    
+                                                            echo "<option value=\"$c_id2\" >$c2</option>";
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
 
                                     </div>
