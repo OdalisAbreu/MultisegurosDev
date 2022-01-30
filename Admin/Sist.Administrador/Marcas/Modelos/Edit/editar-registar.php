@@ -6,11 +6,6 @@
     include('../../../../../controller/VehiculoController.php');
 	include('../../../../../incluidos/nombres.func.php');
 	
-
-    /*Conectarse();
-	$r2 = mysql_query("SELECT * from seguro_modelos WHERE ID ='".$_GET['id']."'");
-    $row = mysql_fetch_array($r2);
-	*/
     Conectarse();
     $vehiculo = new vehiculoController;
     $row = $vehiculo->getModelo($_GET['id']);
@@ -77,9 +72,6 @@
                                                     class="form-control">
                                                     <option value="">- Seleccionar - </option>
                                                     <?php
-                                                        /*$rescat2 = mysql_query(
-                                                            "SELECT id, nombre, veh_tipo from seguro_tarifas order by nombre ASC"
-                                                        );*/
                                                         $tipoVehiculo = new vehiculoController;
                                                         $rescat2 = $tipoVehiculo->getType();
                                                         while ($cat2 = mysql_fetch_array($rescat2)) {
