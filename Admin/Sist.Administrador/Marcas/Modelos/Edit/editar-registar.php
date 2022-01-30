@@ -74,8 +74,7 @@
                                                         if($row['tipo']){
                                                          $tipoVehiculo = new vehiculoController;
                                                          $tipo = $tipoVehiculo->getType($row['tipo']);
-                                                         var_dump($tipo);
-                                                         echo '<option value="'.$tipo['veh_tipo'].'">'.$tipo['name'].'</option>';
+                                                         echo '<option value="'.$tipo['veh_tipo'].'">'.$tipo.'-'.$row['tipo'].'</option>';
                                                         }else{
                                                             echo '<option value="">- Seleccionar - </option>';
                                                         }
