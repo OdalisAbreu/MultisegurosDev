@@ -72,7 +72,9 @@
                                                         if($row['tipo']){
                                                          $tipoVehiculo = new vehiculoController;
                                                          $tipo = $tipoVehiculo->getType($row['tipo']);
-                                                         echo 'Esto es lo que hay '.mysql_fetch_row($tipo);
+                                                         $tipo2 =  mysql_fetch_array($tipo);
+
+                                                         echo 'Esto es lo que hay '.$tipo2['nombre'];
                                                         }else{
                                                             echo 'No hay na';
                                                         }
