@@ -65,6 +65,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                        <div class="col-lg-6">
                                             <select name="tipo" id="tipo" style="display:compact" class="form-control">
                                                 <option value="">- Seleccionar - </option>
                                                 <?php
@@ -79,7 +80,7 @@
 													}
 													?>
                                             </select>
-
+                                        </div>
                                         </div>
 
                                     </div>
