@@ -893,7 +893,7 @@ if ($_POST) {
 
 														function() {
 															var id = $(this).val();
-															var model = <?php echo $cat2['id'];?>
+															var model = document.getElementById("tipo").value;
 															CargarAjax2('Admin/Sist.Sucursal/Seguro/Vehiculos/AJAX/Modelos.php?marca_id=' + id + '&tipo=' + model + '', '', 'GET', 'modelo');
 															console.log(model)
 														});
