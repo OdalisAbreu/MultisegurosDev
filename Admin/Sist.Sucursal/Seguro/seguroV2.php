@@ -897,6 +897,14 @@ if ($_POST) {
 															CargarAjax2('Admin/Sist.Sucursal/Seguro/Vehiculos/AJAX/Modelos.php?marca_id=' + id + '&tipo=' + model + '', '', 'GET', 'modelo');
 															console.log(model)
 														});
+														$("#tipo").change(
+
+															function() {
+																var id = $(this).val();
+																var model = document.getElementById("tipo").value;
+																CargarAjax2('Admin/Sist.Sucursal/Seguro/Vehiculos/AJAX/Modelos.php?marca_id=' + id + '&tipo=' + model + '', '', 'GET', 'modelo');
+																console.log(model)
+															});
 												</script>
 											</div>
 											<p class="error help-block" id="errormarca" style="display:none"><span class="label label-important">Por favor seleccione marca</span></p>
