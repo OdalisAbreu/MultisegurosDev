@@ -7,7 +7,7 @@
 	
 		$marca_id 	= $_GET['marca_id'];
 
-			echo$_GET['marca_id'].'<select name="modelo" id="modelo" style="display:compact" class="form-control">
+			echo$_GET['tipo'].'<select name="modelo" id="modelo" style="display:compact" class="form-control">
 		<option value="0">- Seleccionar - </option>';
 			if($_GET['tipo']){
 				$tipo = $_GET['tipo'];
