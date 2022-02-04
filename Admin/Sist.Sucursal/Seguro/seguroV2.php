@@ -902,7 +902,7 @@ if ($_POST) {
 										<!-- // Group END -->
 										<!-- Group -->
 										<div class="col-md-4 control-group">
-											<label class="control-label">Modelo</label>
+											<label class="control-label">Modelos</label>
 											<div class="controls">
 
 												<?php if ($v['modelo']) {
