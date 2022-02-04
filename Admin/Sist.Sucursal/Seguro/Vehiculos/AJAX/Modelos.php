@@ -6,7 +6,7 @@
 	 
 	
 		$marca_id 	= $_GET['marca_id'];
-		echo $_GET['selec'];
+		echo $_GET['marca_id'];
 			if($_GET['tipo']){
 				$tipo = $_GET['tipo'];
 
