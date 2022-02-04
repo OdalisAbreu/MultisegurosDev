@@ -895,6 +895,7 @@ if ($_POST) {
 															var id = $(this).val();
 															var model = $(this).val();
 															CargarAjax2('Admin/Sist.Sucursal/Seguro/Vehiculos/AJAX/Modelos.php?marca_id=' + id + 'tipo=4' + model + '', '', 'GET', 'modelo');
+															console.log('Admin/Sist.Sucursal/Seguro/Vehiculos/AJAX/Modelos.php?marca_id=' + id + 'tipo=4' + model)
 														});
 												</script>
 											</div>
