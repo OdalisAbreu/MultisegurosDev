@@ -6,12 +6,14 @@
 	 
 	
 		$marca_id 	= $_GET['marca_id'];
-
-			echo$_GET['tipo'].'<select name="modelo" id="modelo" style="display:compact" class="form-control">
-		<option value="0">- Seleccionar - </option>';
+		echo $_GET['marca_id'];
 			if($_GET['tipo']){
 				$tipo = $_GET['tipo'];
-				$rescat = mysql_query("SELECT DISTINCT descripcion, ID, IDMARCA, tipo FROM seguro_modelos WHERE IDMARCA = '$marca_id' order by ID");
+
+				echo' <select name="modelo" id="modelo" style="display:compact" class="form-control">
+			<option value="0">- Seleccionar - </option>';
+		
+			$rescat = mysql_query("SELECT DISTINCT descripcion, ID, IDMARCA, tipo FROM seguro_modelos WHERE IDMARCA = '$marca_id' order by ID");
 			while ($cat = mysql_fetch_array($rescat)) {
 				if($cat['tipo']){
 					if($cat['tipo'] == $tipo){
