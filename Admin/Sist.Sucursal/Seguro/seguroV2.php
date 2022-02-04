@@ -893,7 +893,8 @@ if ($_POST) {
 
 														function() {
 															var id = $(this).val();
-															CargarAjax2('Admin/Sist.Sucursal/Seguro/Vehiculos/AJAX/Modelos.php?marca_id=' + id + '', '', 'GET', 'modelo');
+															var model = $(this).val();
+															CargarAjax2('Admin/Sist.Sucursal/Seguro/Vehiculos/AJAX/Modelos.php?marca_id=' + id + 'tipo=' + model + '', '', 'GET', 'modelo');
 														});
 												</script>
 											</div>
@@ -910,9 +911,10 @@ if ($_POST) {
 												<script>
 												CargarAjax2('Admin/Sist.Sucursal/Seguro/Vehiculos/AJAX/Modelos.php?marca_id=" .
 														$v['veh_marca'] .
+														"&tipo=".$cat2['id'].
 														"&selec=" .
 														$v['modelo'] .
-														"&tipo=4".$cat2['id'].
+														
 														"','','GET','modelo');
 												
 												</script>
