@@ -912,7 +912,7 @@ if ($_POST) {
 														$v['veh_marca'] .
 														"&selec=" .
 														$v['modelo'] .
-														"&tipo=".$cat2['id'].
+														"&tipo=4".$cat2['id'].
 														"','','GET','modelo');
 												
 												</script>
