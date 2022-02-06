@@ -903,7 +903,6 @@ if ($_POST) {
 																var id = document.getElementById("marca").value;
 																var model = document.getElementById("tipo").value;
 																CargarAjax2('Admin/Sist.Sucursal/Seguro/Vehiculos/AJAX/Modelos.php?marca_id=' + id + '&tipo=' + model + '', '', 'GET', 'modelo');
-																console.log(model)
 															});
 												</script>
 											</div>

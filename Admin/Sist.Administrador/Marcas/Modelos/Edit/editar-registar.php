@@ -64,34 +64,40 @@
                                                     id="cod_modelo" name="cod_modelo" value="<?=$row['cod_modelo']?>">
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <label class="strong">Tipo <span class="label label-important" id="Nombres"
-                                                    style="display:none">*</span></label>
-                                            <div class="form-group ">
-                                                <select name="tipo" id="tipo" style="display:compact"
-                                                    class="form-control">
-                                                    <?php
-                                                        if($row['tipo']){
-                                                            $tipoVehiculo = new vehiculoController;
-                                                            $tipoComp = $tipoVehiculo->getType($row['tipo']);
-                                                            $tipo =  mysql_fetch_array($tipoComp);
-                                                         echo '<option value="'.$tipo['veh_tipo'].'">'.$tipo['nombre'].'</option>';
-                                                        }else{
-                                                            echo '<option value="">- Seleccionar - </option>';
-                                                        }
-
-                                                        $tipoVehiculo = new vehiculoController;
-                                                        $rescat2 = $tipoVehiculo->getTypes();
-                                                        while ($cat2 = mysql_fetch_array($rescat2)) {
-                                                            if($tipo['veh_tipo'] != $cat2['veh_tipo']){
-                                                                $c2 = $cat2['nombre'];
-                                                                $c_id2 = $cat2['veh_tipo'];
+                                        <div id="row">
+                                            <div class="col-lg-12">
+                                                <label class="strong">Tipos de vehiculos</label>
+                                                <div class="form-group ">
+                                                    <? 
+                                                                $rescat = mysql_query("SELECT id, nombre, id_serv from seguro_tarifas WHERE activo ='si' order by nombre");
+                                                                while ($eq = mysql_fetch_array($rescat)) { 
+                                                                
+                                                                $nombre = ucfirst(strtolower($eq['nombre'])); 
+                                                                
+                                                                if($num_colum == 0) {}
+                                                                if($b==0){
+                                                                }
+                                                                
+                                                                echo '<div class="col-lg-6">
+                                                                <input  name="equipamientos[]" type="checkbox"  value="'.$eq['id'].'" ';
+                                                                
+                                                                if( $_GET['accion'] == 'registrar'){
+                                                                    echo' checked="checked"';
+                                                                }else{
+                                                                        if(substr_count($eq['id_serv'],"".$row['id']."-")>0){
+                                                                        echo' checked="checked"';
+                                                                    }
+                                                                }
+                                                                echo  ' /><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$nombre.'</font></div>';
+                                                                
+                                                                if($b==1){  
+                                                                    $b=0; 
+                                                                }else{ 
+                                                                    $b = $b+1; 
+                                                                } 
                                                             }
-    
-                                                            echo "<option value=\"$c_id2\" >$c2</option>";
-                                                        }
-                                                        ?>
-                                                </select>
+                                                    ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -99,25 +105,22 @@
                             </div>
                         </div>
                     </div>
+
+                    <input name="accion" type="hidden" id="accion" value="<?=$acc?>">
+                    <input name="id" type="hidden" id="id" value="<?=$row['ID']?>" />
+
+                    <? if(!$_GET['id']){?>
+                    <input name="id_dist" type="hidden" id="id_dist" value="<?=$_SESSION['user_id']?>" />
+                    <input name="fecha" type="hidden" id="fecha" value="<?=date('Y-m-d G:i:s')?>" />
+                    <input name="activo" type="hidden" id="activo" value="si" />
+                    <input name="IDMARCA" type="hidden" id="IDMARCA" value="<?=$_GET['idmarca']?>" />
+                    <? } ?>
+
                 </div>
-            </div>
-        </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button name="acep" type="button" id="acep" class="btn btn-success"
+                        onClick="CargarAjax2_form('Admin/Sist.Administrador/Marcas/Modelos/List/listado.php?pagina=<?=$_GET['pagina']?>&idmarca=<?=$_GET['idmarca']?>','form_edit_perso','cargaajax');"><?=$acc_text?></button>
 
-        <input name="accion" type="hidden" id="accion" value="<?=$acc?>">
-        <input name="id" type="hidden" id="id" value="<?=$row['ID']?>" />
-
-        <? if(!$_GET['id']){?>
-        <input name="id_dist" type="hidden" id="id_dist" value="<?=$_SESSION['user_id']?>" />
-        <input name="fecha" type="hidden" id="fecha" value="<?=date('Y-m-d G:i:s')?>" />
-        <input name="activo" type="hidden" id="activo" value="si" />
-        <input name="IDMARCA" type="hidden" id="IDMARCA" value="<?=$_GET['idmarca']?>" />
-        <? } ?>
-
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        <button name="acep" type="button" id="acep" class="btn btn-success"
-            onClick="CargarAjax2_form('Admin/Sist.Administrador/Marcas/Modelos/List/listado.php?pagina=<?=$_GET['pagina']?>&idmarca=<?=$_GET['idmarca']?>','form_edit_perso','cargaajax');"><?=$acc_text?></button>
-
-    </div>
+                </div>
 </form>
