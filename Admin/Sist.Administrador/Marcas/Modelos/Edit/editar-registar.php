@@ -81,13 +81,13 @@
                                                                 echo '<div class="col-lg-6">
                                                                 <input  name="equipamientos[]" type="checkbox"  value="'.$eq['id'].'" ';
                                                                 
-                                                                if( $_GET['accion'] == 'registrar'){
+                                                               /* if( $_GET['accion'] == 'registrar'){
                                                                     echo' checked="checked"';
                                                                 }else{
                                                                         if(substr_count($eq['id_serv'],"".$row['id']."-")>0){
                                                                         echo' checked="checked"';
                                                                     }
-                                                                }
+                                                                }*/
                                                                 echo  ' /><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$nombre.'</font></div>';
                                                                 
                                                                 if($b==1){  
