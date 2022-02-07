@@ -30,6 +30,8 @@
 	// EDITAR REGISTROS
 	
 	function EditarForm($tabla){
+		var_dump($_POST);
+		exit();
 	foreach($_POST as $nombre_campo => $valor)
 		{
 		$consulta = "UPDATE $tabla
