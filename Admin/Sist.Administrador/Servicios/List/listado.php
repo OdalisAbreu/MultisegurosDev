@@ -61,7 +61,6 @@
 	
 	// EDITAR
 	if($acc1=='Editar'){
-
 		for($i =0; $i<count($_POST['equipamientos']); $i++){
 			if($_POST['equipamientos']>1){
 				$_POST['equipamiento'] .= "".$_POST['equipamientos'][$i].",";
