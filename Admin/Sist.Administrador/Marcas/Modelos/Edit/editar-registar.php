@@ -69,7 +69,7 @@
                                                 <label class="strong">Tipos de vehiculos</label>
                                                 <div class="form-group ">
                                                     <? 
-                                                                $rescat = mysql_query("SELECT id, nombre, id_serv from seguro_tarifas WHERE activo ='si' order by nombre");
+                                                                $rescat = mysql_query("SELECT id, nombre, veh_tipo from seguro_tarifas WHERE activo ='si' order by nombre");
                                                                 while ($eq = mysql_fetch_array($rescat)) { 
                                                                 
                                                                 $nombre = ucfirst(strtolower($eq['nombre'])); 
