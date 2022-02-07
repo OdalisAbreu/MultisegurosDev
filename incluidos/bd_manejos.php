@@ -40,11 +40,12 @@
 	}
 
 	function EditarFormModel($tabla){
-		var_dump($_POST);
+	//	var_dump($_POST);
 	foreach($_POST as $nombre_campo => $valor)	{
 		 $campo = substr($nombre_campo, 0, 4);
 		 if($campo == 'tipo'){
-				 $tipos = $valor.'-';
+		  echo $valor;
+			$tipos = $valor.'-';
 		}
 		echo $tipos;
 		/*$consulta = "UPDATE $tabla
