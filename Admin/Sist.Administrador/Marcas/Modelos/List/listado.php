@@ -37,7 +37,7 @@
 	
 	// EDITAR
 	if($acc1=='Editar'){
-		EditarForm('seguro_modelos');
+		EditarFormModel('seguro_modelos');
 		echo'<script>
 		CargarAjax2("Admin/Sist.Administrador/Marcas/Modelos/List/listado.php?idmarca='.$_GET["idmarca"].'","","GET","cargaajax");
 		$("#myModal").modal("hide"); $("#actul").fadeIn(0); $("#actul").fadeOut(10000);</script> ';

@@ -30,8 +30,6 @@
 	// EDITAR REGISTROS
 	
 	function EditarForm($tabla){
-		var_dump($_POST);
-		exit();
 	foreach($_POST as $nombre_campo => $valor)
 		{
 		$consulta = "UPDATE $tabla
@@ -39,6 +37,22 @@
 		where id = '".$_POST['id']."'";
 		@mysql_query($consulta);
 		}
+	}
+
+	function EditarFormModel($tabla){
+		//var_dump($_POST);
+		
+	foreach($_POST as $nombre_campo => $valor)
+		{
+		if(str_contains($nombre_campo, 'tipo')){
+				echo $nombre_campo;
+		}
+		/*$consulta = "UPDATE $tabla
+		SET $nombre_campo ='$valor' 
+		where id = '".$_POST['id']."'";
+		@mysql_query($consulta);*/
+		}
+		exit();
 	}
 	
 ?>
