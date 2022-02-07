@@ -10,6 +10,10 @@
 	// DETERMINAR SI ES GET O POST
 	 $acc1 = $_POST['accion'].$_GET['action'];
 	
+	 var_dump($_GET['action']);
+	 var_dump($_POST['accion']);
+	 var_dump($acc1);
+	 exit();
 	// DESACTIVAR
 	if($_GET['action']=='desactivar'){
 		$query=mysql_query("UPDATE seguro_modelos SET activo ='no' WHERE id='".$_GET['id']."' LIMIT 1");
