@@ -40,7 +40,7 @@
 	}
 
 	function EditarFormModel($tabla){
-		
+		var_dump($_POST);
 	foreach($_POST as $nombre_campo => $valor)	{
 		 $campo = substr($nombre_campo, 0, 4);
 		 if($campo == 'tipo'){
