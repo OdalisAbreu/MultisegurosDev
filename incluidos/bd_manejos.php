@@ -44,7 +44,7 @@
 		
 	foreach($_POST as $nombre_campo => $valor)	{
 		 $campo = substr($nombre_campo, 1, 4);
-		 var_dump($nombre_campo);
+		 var_dump($campo);
 		 if($campo == 'tipo'){
 				var_dump($nombre_campo);
 		}
