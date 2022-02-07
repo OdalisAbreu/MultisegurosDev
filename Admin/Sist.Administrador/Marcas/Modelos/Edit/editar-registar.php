@@ -75,7 +75,7 @@
                                                                 $nombre = ucfirst(strtolower($eq['nombre'])); 
 
                                                                 echo '<div class="col-lg-6">
-                                                                <input  name="tipo'.$eq['id'].'" type="checkbox"  value="'.$eq['id'].'" ';
+                                                                <input  name="tipo'.$eq['veh_tipo'].'" type="checkbox"  value="'.$eq['veh_tipo'].'" ';
 
                                                                 echo  ' /><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$nombre.'</font></div>';
                                                                 
