@@ -42,9 +42,9 @@
 	function EditarFormModel($tabla){
 		//var_dump($_POST);
 		
-	foreach($_POST as $nombre_campo => $valor)
-		{
-		if(str_contains($nombre_campo, 'tipo')){
+	foreach($_POST as $nombre_campo => $valor)	{
+		 $campo = substr($nombre_campo, 1, 4);
+		if($campo == 'tipo'){
 				echo $nombre_campo;
 		}
 		/*$consulta = "UPDATE $tabla
