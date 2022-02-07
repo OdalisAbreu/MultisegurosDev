@@ -44,15 +44,14 @@
 	foreach($_POST as $nombre_campo => $valor)	{
 		 $campo = substr($nombre_campo, 0, 4);
 		 if($campo == 'tipo'){
-		  echo $valor;
-			$tipos = $valor.'-';
+				 $tipos = $valor.'-';
 		}
-		echo $tipos;
 		/*$consulta = "UPDATE $tabla
 		SET $nombre_campo ='$valor' 
 		where id = '".$_POST['id']."'";
 		@mysql_query($consulta);*/
-		}
+	}
+	echo $tipos;
 		exit();
 	}
 	
