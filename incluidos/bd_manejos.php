@@ -45,13 +45,14 @@
 		 $campo = substr($nombre_campo, 0, 4);
 		 if($campo == 'tipo'){
 				 $tipos = $valor.'-';
+				 echo $valor;
 		}
 		/*$consulta = "UPDATE $tabla
 		SET $nombre_campo ='$valor' 
 		where id = '".$_POST['id']."'";
 		@mysql_query($consulta);*/
 	}
-	echo $tipos;
+	echo 'Aqui los tipos'.$tipos;
 		exit();
 	}
 	
