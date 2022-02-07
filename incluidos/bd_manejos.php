@@ -43,10 +43,10 @@
 		//var_dump($_POST);
 		
 	foreach($_POST as $nombre_campo => $valor)	{
-		 $campo = substr($nombre_campo, 1, 4);
+		 $campo = substr($nombre_campo, 0, 3);
 		 var_dump($campo);
 		 if($campo == 'tipo'){
-				var_dump($nombre_campo);
+				var_dump($campo);
 		}
 		/*$consulta = "UPDATE $tabla
 		SET $nombre_campo ='$valor' 
