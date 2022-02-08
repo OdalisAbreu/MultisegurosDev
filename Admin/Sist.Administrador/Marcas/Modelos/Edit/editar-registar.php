@@ -75,27 +75,27 @@
                                                      $$result = mysql_query("SELECT tipo FROM seguro_modelos where id = $modelId");
                                                       
                                                   while($modelType =  mysql_fetch_row($result)){
-                                                      var_dump($modelType['tipe']);
-                                                      while ($eq = mysql_fetch_array($rescat)) { 
-                                                                 
-                                                                 $nombre = ucfirst(strtolower($eq['nombre'])); 
- 
-                                                                 echo '<div class="col-lg-6">
-                                                                 <input  name="tipo'.$eq['veh_tipo'].'" type="checkbox"  value="'.$eq['veh_tipo'].'" ';
-                                                                           
-                                                                 if( $_GET['accion'] == 'registrar'){
-                                                                     echo' checked=""';
-                                                                }else{
-                                                                         if(substr_count($eq['id_serv'],"".$row['id']."-")>0){
-                                                                        echo' checked=""';
-                                                                    }
-                                                                }
- 
-                                                                 echo  ' /><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$nombre.'</font></div>';
-                                                                 
-                                                             }
-                                                     ?>
-                                                  } 
+                                                      var_dump($modelType['tipo']);
+                                                    } 
+                                                     while ($eq = mysql_fetch_array($rescat)) { 
+                                                                
+                                                                $nombre = ucfirst(strtolower($eq['nombre'])); 
+
+                                                                echo '<div class="col-lg-6">
+                                                                <input  name="tipo'.$eq['veh_tipo'].'" type="checkbox"  value="'.$eq['veh_tipo'].'" ';
+                                                                          
+                                                                if( $_GET['accion'] == 'registrar'){
+                                                                    echo' checked=""';
+                                                               }else{
+                                                                        if(substr_count($eq['id_serv'],"".$row['id']."-")>0){
+                                                                       echo' checked=""';
+                                                                   }
+                                                               }
+
+                                                                echo  ' /><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$nombre.'</font></div>';
+                                                                
+                                                            }
+                                                    ?>
                                                 </div>
                                             </div>
                                         </div>
