@@ -69,6 +69,8 @@
                                                 <label class="strong">Tipos de vehiculos</label>
                                                 <div class="form-group ">
                                                     <? 
+                                                    var_dump($_GET['accion']);
+                                                    var_dump($_GET['id']);
                                                                 $rescat = mysql_query("SELECT id, nombre, veh_tipo from seguro_tarifas WHERE activo ='si' order by nombre");
                                                                 while ($eq = mysql_fetch_array($rescat)) { 
                                                                 
@@ -76,12 +78,12 @@
 
                                                                 echo '<div class="col-lg-6">
                                                                 <input  name="tipo'.$eq['veh_tipo'].'" type="checkbox"  value="'.$eq['veh_tipo'].'" ';
-                                                                  var_dump($_GET['accion']);        
+                                                                          
                                                                 if( $_GET['accion'] == 'registrar'){
                                                                     echo' checked=""';
                                                                }else{
                                                                         if(substr_count($eq['id_serv'],"".$row['id']."-")>0){
-                                                                       echo' checked="checked"';
+                                                                       echo' checked=""';
                                                                    }
                                                                }
 
