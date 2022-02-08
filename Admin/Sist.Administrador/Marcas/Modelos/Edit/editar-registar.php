@@ -73,27 +73,29 @@
                                                      $modelId = $_GET['id'];
                                                      $rescat = mysql_query("SELECT id, nombre, veh_tipo from seguro_tarifas WHERE activo ='si' order by nombre");
                                                      $$result = mysql_query("SELECT tipo FROM seguro_modelos where id = $modelId");
-                                                    $modelType =  mysql_fetch_row($result);  
-                                                  var_dump($modelType[0]);    
-                                                     while ($eq = mysql_fetch_array($rescat)) { 
-                                                                
-                                                                $nombre = ucfirst(strtolower($eq['nombre'])); 
-
-                                                                echo '<div class="col-lg-6">
-                                                                <input  name="tipo'.$eq['veh_tipo'].'" type="checkbox"  value="'.$eq['veh_tipo'].'" ';
-                                                                          
-                                                                if( $_GET['accion'] == 'registrar'){
-                                                                    echo' checked=""';
-                                                               }else{
-                                                                        if(substr_count($eq['id_serv'],"".$row['id']."-")>0){
-                                                                       echo' checked=""';
-                                                                   }
-                                                               }
-
-                                                                echo  ' /><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$nombre.'</font></div>';
-                                                                
-                                                            }
-                                                    ?>
+                                                      
+                                                  while($modelType =  mysql_fetch_row($result)){
+                                                      var_dump($modelType['tipe']);
+                                                      while ($eq = mysql_fetch_array($rescat)) { 
+                                                                 
+                                                                 $nombre = ucfirst(strtolower($eq['nombre'])); 
+ 
+                                                                 echo '<div class="col-lg-6">
+                                                                 <input  name="tipo'.$eq['veh_tipo'].'" type="checkbox"  value="'.$eq['veh_tipo'].'" ';
+                                                                           
+                                                                 if( $_GET['accion'] == 'registrar'){
+                                                                     echo' checked=""';
+                                                                }else{
+                                                                         if(substr_count($eq['id_serv'],"".$row['id']."-")>0){
+                                                                        echo' checked=""';
+                                                                    }
+                                                                }
+ 
+                                                                 echo  ' /><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$nombre.'</font></div>';
+                                                                 
+                                                             }
+                                                     ?>
+                                                  } 
                                                 </div>
                                             </div>
                                         </div>
