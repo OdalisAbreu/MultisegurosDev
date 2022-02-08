@@ -1,4 +1,4 @@
-V. 1.1.5.23 //Agregar multiples modelos y las letras de las matriculas 
+V. 1.1.6.1 //Optener los modelos y mostrarlos en la vista para editar - Validarlos para el API 
  
 Paso a producción
 
