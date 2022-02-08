@@ -87,7 +87,7 @@
                                                                 if( $_GET['accion'] == 'registrar'){
                                                                     echo' checked=""';
                                                                }else{
-                                                                        if(substr_count($tipos,"".$row['veh_tipo']."-")>0){
+                                                                        if(substr_count($tipos,"".$eq['veh_tipo']."-")>0){
                                                                        echo' checked="checked"';
                                                                    }
                                                                }
