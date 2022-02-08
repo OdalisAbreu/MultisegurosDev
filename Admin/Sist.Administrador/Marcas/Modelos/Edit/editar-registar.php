@@ -76,7 +76,7 @@
 
                                                                 echo '<div class="col-lg-6">
                                                                 <input  name="tipo'.$eq['veh_tipo'].'" type="checkbox"  value="'.$eq['veh_tipo'].'" ';
-
+                                                                  var_dump($_GET['accion']);        
                                                                 if( $_GET['accion'] == 'registrar'){
                                                                     echo' checked=""';
                                                                }else{
