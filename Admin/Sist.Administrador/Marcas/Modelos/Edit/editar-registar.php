@@ -75,7 +75,7 @@
                                                      $result = mysql_query("SELECT * FROM seguro_modelos where id = $modelId");
                                                       
                                                   while($modelType =  mysql_fetch_array($result)){
-                                                      var_dump($modelType['tipo']);
+                                                      $tipos = $modelType['tipo'];
                                                     } 
                                                      while ($eq = mysql_fetch_array($rescat)) { 
                                                                 
@@ -87,8 +87,8 @@
                                                                 if( $_GET['accion'] == 'registrar'){
                                                                     echo' checked=""';
                                                                }else{
-                                                                        if(substr_count($eq['id_serv'],"".$row['id']."-")>0){
-                                                                       echo' checked=""';
+                                                                        if(substr_count($tipos,"".$row['veh_tipo']."-")>0){
+                                                                       echo' checked="checked"';
                                                                    }
                                                                }
 
