@@ -69,10 +69,12 @@
                                                 <label class="strong">Tipos de vehiculos</label>
                                                 <div class="form-group ">
                                                     <? 
-                                                    var_dump($_GET['accion']);
-                                                    var_dump($_GET['id']);
-                                                                $rescat = mysql_query("SELECT id, nombre, veh_tipo from seguro_tarifas WHERE activo ='si' order by nombre");
-                                                                while ($eq = mysql_fetch_array($rescat)) { 
+
+                                                     $modelId = $_GET['id'];
+                                                     $rescat = mysql_query("SELECT id, nombre, veh_tipo from seguro_tarifas WHERE activo ='si' order by nombre");
+                                                     $modelType = mysql_query("SELECT tipo FROM seguro_modelos where id = $modelId");
+                                                var_dump($modelType);    
+                                                     while ($eq = mysql_fetch_array($rescat)) { 
                                                                 
                                                                 $nombre = ucfirst(strtolower($eq['nombre'])); 
 
