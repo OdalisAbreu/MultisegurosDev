@@ -80,7 +80,6 @@
                             <th>Fecha</th>
                             <th>Nombre</th>
                             <th>Estado</th>
-							<th>Tipo de Vehiculo</th>
                             <th style="width:172px;">Opciones</th>
                           </tr>
                       </thead>
@@ -155,18 +154,6 @@ if($numeroRegistros<=0)
 	   }else{
 		echo "<font color='#F6060A'><b>".$row['activo']."</b></font>";
 	   }
-	?>
-    </td>
-	<td>
-	<?
-	  if($row['tipo']){
-		$tipoVehiculo = new vehiculoController;
-		$tipoComp = $tipoVehiculo->getType($row['tipo']);
-		$tipo =  mysql_fetch_array($tipoComp);
-	 echo $tipo['nombre'];
-	}else{
-		echo '';
-	}
 	?>
     </td>
     <td>

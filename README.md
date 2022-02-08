@@ -1,4 +1,4 @@
-V. 1.1.6.17 //Optener los modelos y mostrarlos en la vista para editar - Validarlos para el API 
+V. 1.1.6.18 //Optener los modelos y mostrarlos en la vista para editar - Validarlos para el API 
  
 Paso a producción
 
