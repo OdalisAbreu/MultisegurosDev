@@ -73,8 +73,8 @@
                                                      $modelId = $_GET['id'];
                                                      $rescat = mysql_query("SELECT id, nombre, veh_tipo from seguro_tarifas WHERE activo ='si' order by nombre");
                                                      $$result = mysql_query("SELECT tipo FROM seguro_modelos where id = $modelId");
-                                                    $modelType =  mysql_fetch_assoc($result);  
-                                                  var_dump($modelType['tipo']);    
+                                                    $modelType =  mysql_fetch_row($result);  
+                                                  var_dump($modelType[0]);    
                                                      while ($eq = mysql_fetch_array($rescat)) { 
                                                                 
                                                                 $nombre = ucfirst(strtolower($eq['nombre'])); 
