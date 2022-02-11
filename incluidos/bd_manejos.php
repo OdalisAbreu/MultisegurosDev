@@ -45,7 +45,7 @@
 		//Concatena los tipos 
 		$campo = substr($nombre_campo, 0, 4);
 		 if($campo == 'tipo'){
-				 $tipos = $valor.'-'.$tipos;
+				 $tipos = $valor.'-'.$tipos + 100;
 		}else{
 			$consulta = "UPDATE $tabla
 			SET $nombre_campo ='$valor' 

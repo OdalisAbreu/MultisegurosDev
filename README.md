@@ -1,4 +1,4 @@
-V. 1.1.9 //Validarlos para el API el tipo de vehiculo
+V. 1.1.11 //Validarlos para el API el tipo de vehiculo
  
 Paso a producción
 
@@ -8,3 +8,5 @@ Paso a producción
 4.  MOdificar el mensaje que incluya las opciones disponibles
 5. Modificar la seciion de los tipos // agragr tabla intermedia
 6.  Agregar el boton de darle para atras 
+
+7. Validar agregando + 100 al guardar
