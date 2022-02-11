@@ -1,4 +1,4 @@
-V. 1.1.12 //Validarlos para el API el tipo de vehiculo
+V. 1.1.13 //Validarlos para el API el tipo de vehiculo
  
 Paso a producción
 
