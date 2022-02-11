@@ -1,4 +1,4 @@
-V. 1.1.6.18 //Optener los modelos y mostrarlos en la vista para editar - Validarlos para el API 
+V. 1.1.8 //Validarlos para el API el tipo de vehiculo
  
 Paso a producción
 
