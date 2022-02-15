@@ -8,7 +8,6 @@
 		$marca_id 	= $_GET['marca_id'];
 		if($_GET['tipo']){
 				$tipo = $_GET['tipo'];
-				$tipo = $tipo + 100;
 				echo' <select name="modelo" id="modelo" style="display:compact" class="form-control">
 						<option value="0">- Seleccionar - </option>';
 
