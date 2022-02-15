@@ -12,10 +12,29 @@
 				echo' <select name="modelo" id="modelo" style="display:compact" class="form-control">
 			<option value="0">- Seleccionar - </option>';
 		
-			$rescat = mysql_query("SELECT DISTINCT descripcion, ID, IDMARCA, tipo FROM seguro_modelos WHERE IDMARCA = '$marca_id' order by ID");
+			$rescat = mysql_query("SELECT DISTINCT descripcion, ID, IDMARCA, tipo FROM seguro_modelos");
 			while ($cat = mysql_fetch_array($rescat)) {
 				if($cat['tipo']){
-					if($cat['tipo'] == $tipo){
+					
+					if(substr_count($cat['tipo'],"".$tipo."-")>0){
+						$c = $cat['descripcion'];
+						$c_id = $cat['ID'];
+						if($_GET['selec'] == $c_id){
+						echo "<option value=\"$c_id\" selected>$c</option>"; 
+						}else{
+						echo "<option value=\"$c_id\" >$c</option>"; }	
+					}else{
+						echo "<option value=\"$c_id\" >$c</option>"; }						
+					}else{
+					$c = $cat['descripcion'];
+					$c_id = $cat['ID'];
+					if($_GET['selec'] == $c_id){
+					echo "<option value=\"$c_id\" selected>$c</option>"; 
+					}else{
+					echo "<option value=\"$c_id\" >$c</option>"; }
+				    }
+					
+					/*if($cat['tipo'] == $tipo){
 						$c = $cat['descripcion'];
 						$c_id = $cat['ID'];
 						if($_GET['selec'] == $c_id){
@@ -23,14 +42,14 @@
 						}else{
 						echo "<option value=\"$c_id\" >$c</option>"; }						
 					}
-				}else{
-					$c = $cat['descripcion'];
-					$c_id = $cat['ID'];
-					if($_GET['selec'] == $c_id){
-					echo "<option value=\"$c_id\" selected>$c</option>"; 
 					}else{
-					echo "<option value=\"$c_id\" >$c</option>"; }
-				}
+						$c = $cat['descripcion'];
+						$c_id = $cat['ID'];
+						if($_GET['selec'] == $c_id){
+						echo "<option value=\"$c_id\" selected>$c</option>"; 
+						}else{
+						echo "<option value=\"$c_id\" >$c</option>"; }
+					}*/
 
 				}
 
