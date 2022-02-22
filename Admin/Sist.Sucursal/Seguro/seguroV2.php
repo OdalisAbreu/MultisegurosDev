@@ -458,7 +458,7 @@ if ($_POST) {
 		var fechaF = parseInt(fechaD[0] + "" + fechaD[1] + "" + fechaD[2]);
 		var fechaH = parseInt(<?= date("Ymd") ?>);
 
-		alert(fechaF+"-"+fechaH);
+		//alert(fechaF+"-"+fechaH);
 
 		if (fechaF <= fechaH) {
 			$('#error_fecha_ini').fadeIn('9');
