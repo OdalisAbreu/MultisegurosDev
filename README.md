@@ -1,12 +1,4 @@
-V. 1.1.17 //Validarlos para el API el tipo de vehiculo
- 
+V. 1.1.18 //Validar Fecha
 Paso a producción
 
-1.	Agregar a la tabla ¿? El campo para nacionalidad
-2.	Agregar en la tabla seguro_modelos la el campo tipo 
-3.  Para tipo de Vehiculo agregar el campo de letras que corresponda // Agregar en otra tabla 
-4.  MOdificar el mensaje que incluya las opciones disponibles
-5. Modificar la seciion de los tipos // agragr tabla intermedia
-6.  Agregar el boton de darle para atras 
-
-7. Validar agregando + 100 al guardar
+1.	
