@@ -453,15 +453,14 @@ if ($_POST) {
 		// validar FECHAS
 		const fecha = new Date();
 		var HayError = false;
-		let fecha1 = new Date($('#fecha_inicio').val());
-		//alert(fecha1+"-");
-		var fechaD = fecha1.split("-");
+		var fecha1 = $('#fecha_inicio').val();
+		var fechaD = fecha1.split("/");
 		var fechaF = parseInt(fechaD[0] + "" + fechaD[1] + "" + fechaD[2]);
 
-		var fechaH = fecha.getFullYear() + "/" + (fecha.getMonth() +1) + "/" + fecha.getDate();
+		var fechaH = fecha.getFullYear() + "" + (fecha.getMonth() +1) + "" + fecha.getDate();
 		alert(fecha1 + " - " +fechaH);
 
-		if (fecha1 <= fechaH) {
+		if (fechaF <= fechaH) {
 			$('#error_fecha_ini').fadeIn('9');
 			HayError2 = true;
 		} else {
