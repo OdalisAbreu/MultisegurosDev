@@ -458,8 +458,8 @@ if ($_POST) {
 		var fechaD = fecha1.split("-");
 		var fechaF = parseInt(fechaD[0] + "" + fechaD[1] + "" + fechaD[2]);
 
-		var fechaH = fecha.getFullYear() + "/" + (fecha.getMonth() +1) + "/" + fecha.getDate();
-		alert(fechaF+"-"+fechaH);
+		var fechaH = fecha.getFullYear() + "-" + (fecha.getMonth() +1) + "-" + fecha.getDate();
+		alert(fecha1 + " - " +fechaH);
 
 		if (fechaF <= fechaH) {
 			$('#error_fecha_ini').fadeIn('9');
