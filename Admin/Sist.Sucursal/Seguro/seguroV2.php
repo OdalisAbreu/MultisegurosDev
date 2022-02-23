@@ -453,7 +453,7 @@ if ($_POST) {
 		// validar FECHAS
 		const fecha = new Date();
 		var HayError = false;
-		let fecha1 = new date($('#fecha_inicio').val());
+		let fecha1 = new Date($('#fecha_inicio').val());
 		//alert(fecha1+"-");
 		var fechaD = fecha1.split("-");
 		var fechaF = parseInt(fechaD[0] + "" + fechaD[1] + "" + fechaD[2]);
