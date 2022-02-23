@@ -451,14 +451,15 @@ if ($_POST) {
 
 	function EnviarSeguro() {
 		// validar FECHAS
+		const fecha = new Date();
 		var HayError = false;
 		var fecha1 = $('#fecha_inicio').val();
 		//alert(fecha1+"-");
 		var fechaD = fecha1.split("-");
 		var fechaF = parseInt(fechaD[0] + "" + fechaD[1] + "" + fechaD[2]);
-		var fechaH = parseInt(<?= date("Ymd") ?>);
 
-		//alert(fechaF+"-"+fechaH);
+		var fechaH = fecha.getFullYear() + "/" + (fecha.getMonth() +1) + "/" + fecha.getDate();
+		alert(fechaF+"-"+fechaH);
 
 		if (fechaF <= fechaH) {
 			$('#error_fecha_ini').fadeIn('9');
