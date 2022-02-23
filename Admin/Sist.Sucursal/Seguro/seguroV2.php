@@ -455,7 +455,7 @@ if ($_POST) {
 		var HayError = false;
 		var fecha1 = $('#fecha_inicio').val();
 		var fechaD = fecha1.split("/");
-		var fechaF = fechaD[2] + "-" + fechaD[1] + "-" + (fechaD[0] +1) ;
+		var fechaF = fechaD[2] + "-" + fechaD[1] + "-" + (parseInt(fechaD[0]) +1) ;
 		var fechaH = fecha.getFullYear() + "-" + (fecha.getMonth() +1) + "-" + fecha.getDate();
 		var fechaActtual = new Date(fechaH);
 		var fechaPoliza = new Date(fechaF);
