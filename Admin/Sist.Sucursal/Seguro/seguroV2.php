@@ -458,16 +458,16 @@ if ($_POST) {
 		var fechaF = parseInt(fechaD[0] + "" + fechaD[1] + "" + fechaD[2]);
 
 		var fechaH = fecha.getFullYear() + "" + (fecha.getMonth() +1) + "" + fecha.getDate();
-		alert(fecha1 + " - " +fechaH);
+		alert(fechaF + " - " +fechaH);
 
 		if (fechaF <= fechaH) {
 			$('#error_fecha_ini').fadeIn('9');
-			HayError2 = true;
+			HayError = true;
 		} else {
 			$('#error_fecha_ini').fadeOut('3');
 		}
 
-		console.log(HayError2);
+		console.log(HayError);
 		// si envia error
 		if (HayError == true) {
 			alert('Por Favor! \n Asegurate de Completar todos los campos abligatorios');
