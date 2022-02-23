@@ -459,6 +459,7 @@ if ($_POST) {
 		var fechaH = fecha.getFullYear() + "-" + (fecha.getMonth() +1) + "-" + fecha.getDate();
 		var fechaActtual = new Date(fechaH);
 		var fechaPoliza = new Date(fechaF);
+		console.log(fecha1s);
 		console.log(fechaF);
 		console.log(fechaH);
 
