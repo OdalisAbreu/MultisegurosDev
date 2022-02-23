@@ -1,4 +1,4 @@
- 1.1.34 //Validar Fecha
+ 1.1.35 //Validar Fecha
 Paso a producción
 
-1.	
+1.	function EnviarSeguro() -> segurosV2.php

@@ -460,11 +460,6 @@ if ($_POST) {
 		var fechaValida =  fecha.getDate()+ "/" + (fecha.getMonth() +1) + "/" + fecha.getFullYear();
 		var fechaActtual = new Date(fechaH);
 		var fechaPoliza = new Date(fechaF);
-		console.log(fecha1);
-		console.log(fechaF);
-		console.log(fechaH);
-
-		alert(fechaActtual + "    -----   " +fechaPoliza);
 
 		if (fechaActtual.getTime()  > fechaPoliza.getTime()) {
 			$('#error_fecha_ini').fadeIn('9');
