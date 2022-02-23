@@ -453,7 +453,7 @@ if ($_POST) {
 		// validar FECHAS
 		const fecha = new Date();
 		var HayError = false;
-		var fecha1 = $('#fecha_inicio').val();
+		let fecha1 = new date($('#fecha_inicio').val());
 		//alert(fecha1+"-");
 		var fechaD = fecha1.split("-");
 		var fechaF = parseInt(fechaD[0] + "" + fechaD[1] + "" + fechaD[2]);
@@ -468,7 +468,7 @@ if ($_POST) {
 			$('#error_fecha_ini').fadeOut('3');
 		}
 
-
+		console.log(HayError2);
 		// si envia error
 		if (HayError == true) {
 			alert('Por Favor! \n Asegurate de Completar todos los campos abligatorios');
