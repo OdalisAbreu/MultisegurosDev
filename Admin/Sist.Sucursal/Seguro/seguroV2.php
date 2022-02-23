@@ -455,7 +455,7 @@ if ($_POST) {
 		var HayError = false;
 		var fecha1 = $('#fecha_inicio').val();
 		var fechaD = fecha1.split("/");
-		var fechaF = fechaD[2] + "-" + fechaD[1] + "-" + fechaD[0];
+		var fechaF = fechaD[2] + "-" + fechaD[1] + "-" + (fechaD[0] +1) ;
 		var fechaH = fecha.getFullYear() + "-" + (fecha.getMonth() +1) + "-" + fecha.getDate();
 		var fechaActtual = new Date(fechaH);
 		var fechaPoliza = new Date(fechaF);
@@ -475,7 +475,7 @@ if ($_POST) {
 		console.log(HayError);
 		// si envia error
 		if (HayError == true) {
-			alert('Por Favor! \n Asegurate de Completar todos los campos abligatorios');
+			alert('Por Favor! \n Asegúrate que la fecha de emisión no sea antes del: '+ fechaActtual);
 		} else {
 			if (confirm('Realmente deseas comprar este seguro?')) {
 				CargarAjax2_form('Admin/Sist.Sucursal/Seguro/seguroV2.php', 'form_edit_prof', 'formprinc');
