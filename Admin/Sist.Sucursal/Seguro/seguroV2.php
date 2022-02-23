@@ -455,12 +455,14 @@ if ($_POST) {
 		var HayError = false;
 		var fecha1 = $('#fecha_inicio').val();
 		var fechaD = fecha1.split("/");
-		var fechaF = parseInt(fechaD[2] + "" + fechaD[1] + "" + fechaD[0]);
+		var fechaF = parseInt(fechaD[2] + "-" + fechaD[1] + "-" + fechaD[0]);
+		var fechaH = fecha.getFullYear() + "-" + (fecha.getMonth() +1) + "-" + fecha.getDate();
+		var fechaActtual = new Date(fechaH);
+		var fechaPoliza = new Date(fechaF);
 
-		var fechaH = fecha.getFullYear() + "" + (fecha.getMonth() +1) + "" + fecha.getDate();
-		alert(fechaF + " - " +fechaH);
+		alert(fechaActtual + " - " +fechaPoliza);
 
-		if (fechaF <= fechaH) {
+		if (fechaActtual.getTime()  > fechaPoliza.getTime()) {
 			$('#error_fecha_ini').fadeIn('9');
 			HayError = true;
 		} else {
