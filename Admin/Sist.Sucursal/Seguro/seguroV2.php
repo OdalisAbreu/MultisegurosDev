@@ -458,7 +458,7 @@ if ($_POST) {
 		var fechaF = parseInt(fechaD[2] + "-" + fechaD[1] + "-" + fechaD[0]);
 		var fechaH = fecha.getFullYear() + "-" + (fecha.getMonth() +1) + "-" + fecha.getDate();
 		var fechaActtual = new Date(fechaH);
-		var fechaPoliza = new Date(fechaF);
+		var fechaPoliza = new Date(fecha1);
 		console.log(fecha1);
 		console.log(fechaF);
 		console.log(fechaH);

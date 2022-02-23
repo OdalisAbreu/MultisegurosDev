@@ -1,4 +1,4 @@
- 1.1.29 //Validar Fecha
+ 1.1.30 //Validar Fecha
 Paso a producción
 
 1.	
