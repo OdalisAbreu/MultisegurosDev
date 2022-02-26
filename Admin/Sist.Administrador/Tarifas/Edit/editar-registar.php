@@ -157,10 +157,9 @@
                         <? 
 
                           $placas = array('A','B','C','D','F','G','L','H','I','T','P','U','J','R','S','M','O','E','V','W','K','Y','Z','DD','PP');
-                        //  $tipoVehiculo = mysql_query("SELECT * FROM seguro_modelos where id = $modelId");
 
+                        echo $row['placas'];
                           foreach($placas as $placa){
-                            echo $row['nombre'];
                             echo '<div class="col-lg-3">
                                   <input  name="placa'.$placa.'" type="checkbox"  value="'.$placa.'"/><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$placa.'</font></div>';
                           }
