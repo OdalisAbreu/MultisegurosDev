@@ -468,7 +468,6 @@ if ($_POST) {
 			$('#error_fecha_ini').fadeOut('3');
 		}
 
-		console.log(HayError);
 		// si envia error
 		if (HayError == true) {
 			alert('Por Favor! \n Asegúrate que la fecha de emisión no sea antes del: '+ fechaValida);
