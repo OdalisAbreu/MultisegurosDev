@@ -155,7 +155,7 @@
                     <label class="strong">Identificador de placas</label>
                     <div class="form-group ">
                         <? 
-                          $placas = array('A','B','C','D','F','G','L','H','I','T','P','U','J','R','S','M','O','E','V','W','O','Y','Z');
+                          $placas = array('A','B','C','D','F','G','L','H','I','T','P','U','J','R','S','M','O','E','V','W','K','Y','Z','DD','PP');
                           
                           foreach($placas as $placa){
                             echo '<div class="col-lg-3">
