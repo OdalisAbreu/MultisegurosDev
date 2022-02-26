@@ -1,7 +1,7 @@
- V. 1.2.3 //Validar por Matricula
+ V. 1.2.4 //Validar por Matricula
 Paso a producción
 
 1.	function EnviarSeguro() -> segurosV2.php
     Ruta: \Admin\Sist.Sucursal\Seguro\seguroV2.php
 2. 
-    Ruta:  \Admin\Sist.Administrador\Seguros\Tarifas\Edit\editar-registar.php
+    Ruta: \Admin\Sist.Administrador\Tarifas\Edit\editar-registar.php

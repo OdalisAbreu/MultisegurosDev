@@ -35,7 +35,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Información de la tarifa -1
+                            Información de la tarifa
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -130,23 +130,6 @@
                     </div>
                     <div id="erroruser" style="font-size:12px; color:#F00; display:none;">-Error: este usuario ya existe
                         en nuestra base de datos.</div>
-                </div>
-            </div>
-            <div id="row">
-                <div class="col-lg-12">
-                    <label class="strong">Identificador de placas</label>
-                    <div class="form-group ">
-                        <? 
-                          $placas = array('A','B','C','D','F','G','L','H','I','T','P','U','J','R','S','M','O','E','V','W','O','Y','Z');
-                          
-                          foreach($placas as $placa){
-                            echo '<div class="col-lg-6">
-                                  <input  name="placa'.$placa.'" type="checkbox"  value="'.$placa.'" ';
-                          }
-
-
-                        ?>
-                    </div>
                 </div>
             </div>
         </div>
