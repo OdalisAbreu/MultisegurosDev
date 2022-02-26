@@ -35,7 +35,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Información de la tarifa -2
+                            Información de la tarifa
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -155,9 +155,12 @@
                     <label class="strong">Identificador de placas</label>
                     <div class="form-group ">
                         <? 
+
                           $placas = array('A','B','C','D','F','G','L','H','I','T','P','U','J','R','S','M','O','E','V','W','K','Y','Z','DD','PP');
-                          
+                        //  $tipoVehiculo = mysql_query("SELECT * FROM seguro_modelos where id = $modelId");
+
                           foreach($placas as $placa){
+                            echo $row['nombre'];
                             echo '<div class="col-lg-3">
                                   <input  name="placa'.$placa.'" type="checkbox"  value="'.$placa.'"/><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$placa.'</font></div>';
                           }
