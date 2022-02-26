@@ -158,7 +158,7 @@
                           $placas = array('A','B','C','D','F','G','L','H','I','T','P','U','J','R','S','M','O','E','V','W','O','Y','Z');
                           
                           foreach($placas as $placa){
-                            echo '<div class="col-lg-4">
+                            echo '<div class="col-lg-3">
                                   <input  name="placa'.$placa.'" type="checkbox"  value="'.$placa.'"/><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$placa.'</font></div>';
                           }
 
