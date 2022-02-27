@@ -39,6 +39,7 @@
 		}
 	}*/
 	function EditarForm($tabla){
+		echo 'ENTRO AQUI';
 		$tipos = '';
 	foreach($_POST as $nombre_campo => $valor)
 		{
