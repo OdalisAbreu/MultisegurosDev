@@ -159,7 +159,12 @@
                           $placas = array('A','B','C','D','F','G','L','H','I','T','P','U','J','R','S','M','O','E','V','W','K','Y','Z','DD','PP');
 
                           if($row['placas']){
+                            $placasActivas = array($row['placas']);
+                            foreach($placasActivas as $placaActiva){
+                              echo $placaActiva;
+                            }
                             $checked = "checked";
+
                           }else{
                             $checked = "";
                           }
