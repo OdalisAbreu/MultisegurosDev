@@ -165,6 +165,7 @@
                               foreach($placasActivas as $placaActiva){
                                 if($placaActiva == $placa){
                                   $checked = "checked";
+                                  echo $placaActiva." - ".$placa;
                                 }else{
                                   $checked = "";    
                                 }
