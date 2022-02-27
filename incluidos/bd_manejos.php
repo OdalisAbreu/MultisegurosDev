@@ -45,6 +45,7 @@
 				$campo = substr($nombre_campo, 0, 6);
 				if($campo == 'placas'){
 						$tipos = strval($valor).','.$tipos;
+						echo $tipos;
 				}else{
 					$consulta = "UPDATE $tabla
 					SET $nombre_campo ='$valor' 
@@ -52,6 +53,7 @@
 					@mysql_query($consulta);
 				}
 			}
+			var_dump($tipos);
 			$consulta = "UPDATE $tabla
 			SET 'placas' ='$tipos' 
 			where id = '".$_POST['id']."'";
