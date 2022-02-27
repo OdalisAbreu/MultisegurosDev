@@ -161,7 +161,10 @@
                           if($row['placas']){
                             $placasActivas = explode(',',$row['placas']);
                             $checked = "checked";
-                            var_dump($placasActivas);
+                            foreach($placasActivas as $placaActiva){
+                              echo $placaActiva." - ";
+                            }
+                            
                           }else{
                             $checked = "";
                           }
