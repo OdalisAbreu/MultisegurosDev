@@ -155,13 +155,13 @@
                     <label class="strong">Identificador de placas</label>
                     <div class="form-group ">
                         <? 
-
                           $placas = array('A','B','C','D','F','G','L','H','I','T','P','U','J','R','S','M','O','E','V','W','K','Y','Z','DD','PP');
                           $checked = "";
+                          if($row['placas']){
+                            $placasActivas = explode(',',$row['placas']);
+                          }
                           foreach($placas as $placa){
-                            
                             if($row['placas']){
-                              $placasActivas = explode(',',$row['placas']);
                               foreach($placasActivas as $placaActiva){
                                 if($placaActiva == $placa){
                                   $checked = "checked";
@@ -169,13 +169,10 @@
                                   $checked = "";    
                                 }
                               }
-                              
                             }
                             echo '<div class="col-lg-3">
                                   <input  name="placa'.$placa.'" type="checkbox"  value="'.$placa.'" '.$checked.'/><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$placa.'</font></div>';
                           }
-
-
                         ?>
                     </div>
                 </div>
