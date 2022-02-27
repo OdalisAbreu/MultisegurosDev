@@ -53,7 +53,7 @@
 				}
 			}
 			$consulta = "UPDATE $tabla
-			SET $nombre_campo ='$tipos' 
+			SET 'placas' ='$tipos' 
 			where id = '".$_POST['id']."'";
 			@mysql_query($consulta);
 		}
