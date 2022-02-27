@@ -1,4 +1,4 @@
- V. 1.2.23 //Validar por Matricula
+ V. 1.2.24 //Validar por Matricula
 Paso a producción
 
 1.	function EnviarSeguro() -> segurosV2.php
