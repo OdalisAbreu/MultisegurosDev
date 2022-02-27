@@ -161,7 +161,7 @@
                           if($row['placas']){
                             $placasActivas = array($row['placas']);
                             foreach($placasActivas as $placaActiva){
-                              echo $placaActiva;
+                              echo 'Esta';
                             }
                             $checked = "checked";
 
