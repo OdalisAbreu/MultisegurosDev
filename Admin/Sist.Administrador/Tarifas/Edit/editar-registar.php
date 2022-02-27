@@ -162,8 +162,9 @@
                             if($row['placas']){
                               $placasActivas = explode(',',$row['placas']);
                               foreach($placasActivas as $placaActiva){
-                                if($placaActiva = $placa){
+                                if($placaActiva == $placa){
                                   $checked = "checked";
+                                  echo 'Paso';
                                 }else{
                                   $checked = "";    
                                 }
