@@ -39,20 +39,19 @@
 		}
 	}*/
 	function EditarForm($tabla){
-		echo "ENTRO AQUI";
 		$tipos = '';
-	foreach($_POST as $nombre_campo => $valor)
-		{
-		$campo = substr($nombre_campo, 0, 5);
-		if($campo == 'placas'){
-				$tipos = $valor.','.$tipos;
-		}else{
-			$consulta = "UPDATE $tabla
-			SET $nombre_campo ='$valor' 
-			where id = '".$_POST['id']."'";
-			@mysql_query($consulta);
-		}
-		}
+		foreach($_POST as $nombre_campo => $valor)
+			{
+			$campo = substr($nombre_campo, 0, 5);
+			if($campo == 'placas'){
+					$tipos = $valor.','.$tipos;
+			}else{
+				$consulta = "UPDATE $tabla
+				SET $nombre_campo ='$valor' 
+				where id = '".$_POST['id']."'";
+				@mysql_query($consulta);
+			}
+			}
 		}
 
 	function EditarFormModel($tabla){

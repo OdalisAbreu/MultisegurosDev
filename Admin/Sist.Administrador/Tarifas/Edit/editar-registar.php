@@ -162,7 +162,7 @@
                           }
                           foreach($placas as $placa){
                             echo '<div class="col-lg-3">
-                                  <input  name="placa'.$placa.'" type="checkbox"  value="'.$placa.'" ';
+                                  <input  name="placas'.$placa.'" type="checkbox"  value="'.$placa.'" ';
 
                             if($row['placas']){
                               foreach($placasActivas as $placaActiva){
