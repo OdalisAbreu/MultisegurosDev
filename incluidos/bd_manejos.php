@@ -42,17 +42,20 @@
 		$tipos = '';
 		foreach($_POST as $nombre_campo => $valor)
 			{
-			$campo = substr($nombre_campo, 0, 6);
-			if($campo == 'placas'){
-					$tipos = strval($valor).','.$tipos;
-					echo "ENTRO";
-			}else{
-				$consulta = "UPDATE $tabla
-				SET $nombre_campo ='$valor' 
-				where id = '".$_POST['id']."'";
-				@mysql_query($consulta);
+				$campo = substr($nombre_campo, 0, 6);
+				if($campo == 'placas'){
+						$tipos = strval($valor).','.$tipos;
+				}else{
+					$consulta = "UPDATE $tabla
+					SET $nombre_campo ='$valor' 
+					where id = '".$_POST['id']."'";
+					@mysql_query($consulta);
+				}
 			}
-			}
+			$consulta = "UPDATE $tabla
+			SET $nombre_campo ='$tipos' 
+			where id = '".$_POST['id']."'";
+			@mysql_query($consulta);
 		}
 
 	function EditarFormModel($tabla){
