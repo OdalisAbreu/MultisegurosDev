@@ -42,7 +42,7 @@
 		$tipos = '';
 		foreach($_POST as $nombre_campo => $valor)
 			{
-			$campo = substr($nombre_campo, 0, 5);
+			$campo = substr($nombre_campo, 0, 6);
 			if($campo == 'placas'){
 					$tipos = $valor.','.$tipos;
 			}else{
