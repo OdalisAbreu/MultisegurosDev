@@ -157,8 +157,9 @@
                         <? 
 
                           $placas = array('A','B','C','D','F','G','L','H','I','T','P','U','J','R','S','M','O','E','V','W','K','Y','Z','DD','PP');
-
+                          $checked = "";
                           foreach($placas as $placa){
+                            
                             if($row['placas']){
                               $placasActivas = explode(',',$row['placas']);
                               foreach($placasActivas as $placaActiva){
@@ -169,8 +170,6 @@
                                 }
                               }
                               
-                            }else{
-                              $checked = "";
                             }
                             echo '<div class="col-lg-3">
                                   <input  name="placa'.$placa.'" type="checkbox"  value="'.$placa.'" '.$checked.'/><font face="Georgia, Times New Roman, Times, serif" style="font-size: small;"> '.$placa.'</font></div>';
