@@ -1,8 +1,8 @@
- V. 1.2.40 //Validar por Matricula
+ V. 1.2.41 //Validar por Matricula
 Paso a producción
 
-1.	function EnviarSeguro() -> segurosV2.php
-    Ruta: \Admin\Sist.Sucursal\Seguro\seguroV2.php
-2. 
+1. Agregar validador de Matricula Add Linea 153 - 162
     Ruta: \Admin\Sist.Administrador\Tarifas\Edit\editar-registar.php
+   
+   Update funtion EditarForm($tabla) 
     Ruta: \incluidos\bd_manejos.php

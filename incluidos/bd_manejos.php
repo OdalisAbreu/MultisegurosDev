@@ -28,35 +28,15 @@
 	
 	
 	// EDITAR REGISTROS
-	
-/*	function EditarForm($tabla){
-	foreach($_POST as $nombre_campo => $valor)
-		{
-		$consulta = "UPDATE $tabla
-		SET $nombre_campo ='$valor' 
-		where id = '".$_POST['id']."'";
-		@mysql_query($consulta);
-		}
-	}*/
 	function EditarForm($tabla){
-		$tipos = '';
 		foreach($_POST as $nombre_campo => $valor)
 			{
-				$campo = substr($nombre_campo, 0, 6);
-				if($campo == 'placas'){
-						$tipos = strval($valor).','.$tipos;
-				}else{
-					$consulta = "UPDATE $tabla
-					SET $nombre_campo ='$valor' 
-					where id = '".$_POST['id']."'";
-					@mysql_query($consulta);
-				}
-			}
 			$consulta = "UPDATE $tabla
-			SET placas ='$tipos' 
+			SET $nombre_campo ='$valor' 
 			where id = '".$_POST['id']."'";
 			@mysql_query($consulta);
-		}
+			}
+	}
 
 	function EditarFormModel($tabla){
 	$tipos = '';
