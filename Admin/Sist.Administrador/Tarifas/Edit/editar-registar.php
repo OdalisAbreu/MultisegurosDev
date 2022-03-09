@@ -154,8 +154,8 @@
                 <div class="col-lg-12">
                     <label class="strong">Identificador de placas</label>
                     <div class="form-group ">
-                        <input name="ap" type="text" class="form-control" id="ap"
-                            placeholder="ap" onKeyPress="ValidaSoloNumeros()"
+                        <input name="placas" type="text" class="form-control" id="placas"
+                            placeholder="V,E,O,A" onKeyPress="ValidaSoloNumeros()"
                             value="<?=$row['placas']; ?>">
                     </div>
                 </div>
