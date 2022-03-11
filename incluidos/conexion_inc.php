@@ -13,7 +13,7 @@ function Conectarse()
 	$db_user = "multiseguroscom"; // Nombre del usuario con permisos para acceder
 	$db_pass = "Hayunpaisenelmundo"; // Contraseña de dicho usu
     */
-	$db_host = "72.167.221.234"; // Host al que conectar, habitualmente es el ‘localhost’
+	$db_host = "localhost"; // Host al que conectar, habitualmente es el ‘localhost’
 	$db_nombre = "multiseg_dev"; // Nombre de la Base de Datos que se desea utilizar
 	$db_user = "multiseg_admin"; // Nombre del usuario con permisos para acceder
 	$db_pass = "p48LU)8gLVk("; // Contraseña de dicho usu
