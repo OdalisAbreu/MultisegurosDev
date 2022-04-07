@@ -66,13 +66,13 @@
           <div class="col-lg-6">
           <label class="strong">Cedula </label>
             <div class="form-group ">
-                   <input name="cedula" type="text" class="form-control" id="cedula" placeholder="Cedula"  value="<?=$row['asegurado_cedula']?>" disabled> 
+                   <input name="cedula" type="text" class="form-control" id="cedula" placeholder="Cedula"  value="<?=$row['asegurado_cedula']?>" readonly> 
              </div>
           </div>
           <div class="col-lg-6">
           <label class="strong">Direcci&oacute;n </label>
             <div class="form-group ">
-               <input name="direccion" type="text" class="form-control" id="direccion" placeholder="Direccion"  value="<?=$row['asegurado_direccion']?>" disabled>
+               <input name="direccion" type="text" class="form-control" id="direccion" placeholder="Direccion"  value="<?=$row['asegurado_direccion']?>">
             </div>
           </div>
           <div class="col-lg-6">

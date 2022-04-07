@@ -157,9 +157,6 @@ $rescat2 = mysql_query("SELECT * from seguros  order by nombre ASC");
     <tr>
     	<td colspan="2" style="background-color:#FFF; text-align:right">
                         
-            <a href="javascript:" onclick="CargarAjax_win('Admin/Sist.Distribuidor/Revisiones/Ticket/Edit/editar-vehiculo.php?id=<?=$RQVehi['id']?>&poliza=<?=$_GET['poliza']?>&aseg=<?=$_GET['aseg']?>','','GET','cargaajax');" data-title="Editar"  class="btn btn-info">
-            Editar datos del vehiculo 
-            </a>
             
                         </td>
     </tr>
