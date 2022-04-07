@@ -8,16 +8,16 @@ date_default_timezone_set('America/Santo_Domingo');
 function Conectarse()
 {
 
-	/*$db_host = "multiseg.cyyrfieqmu0s.us-east-1.rds.amazonaws.com"; // Host al que conectar, habitualmente es el ‘localhost’
+	$db_host = "multiseg.cyyrfieqmu0s.us-east-1.rds.amazonaws.com"; // Host al que conectar, habitualmente es el ‘localhost’
 	$db_nombre = "multiseg_2"; // Nombre de la Base de Datos que se desea utilizar
 	$db_user = "multiseguroscom"; // Nombre del usuario con permisos para acceder
 	$db_pass = "Hayunpaisenelmundo"; // Contraseña de dicho usu
-    */
-	$db_host = "localhost"; // Host al que conectar, habitualmente es el ‘localhost’
+    
+/*	$db_host = "localhost"; // Host al que conectar, habitualmente es el ‘localhost’
 	$db_nombre = "multiseg_dev"; // Nombre de la Base de Datos que se desea utilizar
 	$db_user = "multiseg_admin"; // Nombre del usuario con permisos para acceder
 	$db_pass = "p48LU)8gLVk("; // Contraseña de dicho usu
-	// Ahora estamos realizando una conexión y la llamamos ‘$link’
+*/	// Ahora estamos realizando una conexión y la llamamos ‘$link’
 	$link = mysql_connect($db_host, $db_user, $db_pass);
 	// Seleccionamos la base de datos que nos interesa
 	mysql_select_db($db_nombre, $link);

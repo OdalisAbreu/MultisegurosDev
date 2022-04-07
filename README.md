@@ -1,5 +1,7 @@
- V. 1.2.43 //Validar por Matricula
+ V. 1.3.0 //Validar por Matricula
 Paso a producción
 
-Agregar el campo para la placa general
+1. Git OIngnore
+2. Carpeta Revisiones a Sist.Distribuidor
+3. Distribuidor menu
    
