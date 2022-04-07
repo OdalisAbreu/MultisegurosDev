@@ -1,4 +1,4 @@
- V. 1.3.0 //Validar por Matricula
+ V. 1.3.2 //Actualizar Datos 
 Paso a producción
 
 1. Git OIngnore
