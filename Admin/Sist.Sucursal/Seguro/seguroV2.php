@@ -1039,6 +1039,7 @@ if ($_POST) {
 										<!-- Group -->
 										<div class="col-md-3 control-group">
 											<label class="control-label">Celular *</label>
+											
 											<div class="controls">
 												<input type="text" class="form-control" name="telefono1" id="telefono1" value="<?= $row['telefono1'] ?>" onKeyPress="return acceptNum(event)" maxlength="12" />
 											</div>
