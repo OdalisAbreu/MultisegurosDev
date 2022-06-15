@@ -107,26 +107,16 @@ if ($_SESSION["funcion_id"] == '1') { ?>
     <ul class="nav nav-second-level">
 
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Marcas/List/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Marcas</a></li>
-
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Provincia/List/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Provincia</a></li>
-
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Tarifas/List/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Tarifas</a></li>
-
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Tarifas_backup/List/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Tarifas backup</a></li>
-
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Tarifas_backup/List/Costolistado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Costos backup</a></li>
-
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Suplidores/List/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Suplidores</a></li>
-
-
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Seguros/List/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Aseguradoras</a></li>
-
-
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Servicios/List/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Servicios</a></li>
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Servicios_backup/List/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Servicios backup</a></li>
-
-
       <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Privilegios/List/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Privilegios</a></li>
+      <li><a href="#" onClick="CargarAjax2('Admin/Sist.Administrador/Validadores/Placas/listado.php','','GET','cargaajax');"><i class="fa fa-tag fa-fw"></i> Validar Placas</a></li>
 
 
     </ul>
